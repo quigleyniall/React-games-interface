@@ -1,0 +1,890 @@
+*{
+  box-sizing: border-box;
+}
+
+.App {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Primary */
+.weapons {
+  width: 30%;
+  display: inline-block;
+}
+
+.primary-weapons {
+  width: 50%;
+  display: inline-block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.weapon-class {
+  display: inline-block;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #2f261e;
+  color: white;
+  font-weight: 900;
+}
+
+/* Secondary */
+
+.secondary-weapons-container {
+  width: 30%;
+  display: inline-block;
+  position: relative;
+  top: 10%;
+  left: 0%;
+}
+
+.secondary-weapons {
+  width: 50%;
+  display: inline-block;
+  float: right;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.secondary-weapons:after {
+  display: table;
+  content: "";
+  float: none;
+}
+
+/* Perk */
+.perk-container {
+  background: linear-gradient(to bottom, transparent 0%,black 80%, black 100%), url("https://www.callofduty.com/content/dam/atvi/callofduty/wwii/home/sh-overview.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.perks-items {
+  width: 50%;
+  display: inline-block;
+}
+
+.perk-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  border: 2px solid transparent;
+  transition: all .2s;
+}
+
+.perk-display:hover {
+  transform: scale(1.1);
+}
+
+.perk-name {
+  text-decoration: none;
+}
+.perk-title {
+  text-decoration: none;
+  color: white;
+}
+
+.perk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.perk:hover {
+  outline: 2px solid #d2b711;
+  cursor: pointer;
+}
+
+.perk-desc {
+  font-weight: 550;
+}
+
+.perk-image {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+.perk-tier {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.perk-tier:hover, .weapon-class:hover {
+  border: 2px solid #665b42;
+  cursor: pointer;
+}
+
+ /* weaponInfo && SecondWeaponInfo */
+.weapon-background {
+  background: linear-gradient(to bottom, transparent 0%, white 100%), url("https://assets.vg247.com/current//2018/04/call_of_duty_ww2_COD-WWII-War-Machine_Dunkirk.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-weight: 600;
+  color: black;
+}
+.weapon-thumbnail {
+  width: 200px;
+  height: 200px;
+}
+.weapon-details {
+  text-align: left;
+}
+
+.weapon-desc {
+    font-weight: 600;
+}
+.weapons-info {
+  float: right;
+  width: 70%;
+  display: inline-block;
+}
+
+.secondary-weapon-info {
+  position: absolute;
+  top: 3rem;
+  width: 800px;
+}
+
+.weapon-info {
+  position: absolute;
+  top: 6rem;
+  width: 800px;
+  display: inline-block;
+}
+
+.weapon-info-details {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.weapon-title {
+  font-weight: 700;
+  padding: 1rem 3rem;
+}
+
+.weapon-name {
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.weapon-model {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.weapon-title:hover {
+  background-color: #2f261e;
+  border: 2px solid #665b42;
+  color: white;
+}
+
+.weapon-image {
+  width: 800px;
+  height: 350px;
+  position: relative;
+  z-index: 6;
+}
+
+.weapon-stats {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: left;
+  left: 70%;
+  top: 50%;
+  z-index: 8;
+}
+
+.empty-rect {
+  width: 100px;
+  height: .4rem;
+  z-index: 2;
+  position: relative;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.fill-rect {
+  height: .4rem;
+  z-index: 5;
+  position: absolute;
+  background-color: grey;
+}
+
+.weapon-button {
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #b1b1b1;
+}
+
+.weapon-button:hover {
+  background-color: #49657b;
+}
+
+.margin-bottom-md {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 5px;
+}
+
+/* SoliderMenu */
+.soldier {
+  text-align: left;
+  margin: 0 auto;
+  color: white;
+}
+.secondary-background {
+  background: linear-gradient(to bottom, transparent 0%, white 100%), url("https://assets.vg247.com/current//2018/04/call_of_duty_ww2_COD-WWII-War-Machine_Dunkirk.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* stats */
+.username {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.user-rating {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.user-stat-details {
+  padding: 1rem 0;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  margin-right: 20px;
+}
+
+.stats {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 600;
+}
+.user-stat {
+  float: right;
+  margin-left: 55px;
+}
+.user-stats {
+  display: flex;
+}
+
+.stat-heading {
+ color: white;
+ text-transform: uppercase;
+ font-size: 1rem;
+ font-weight: 540;
+ margin-bottom: 5px;
+}
+
+/* divisions */
+.division {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 100%), url("https://thegamehaus.com/wp-content/uploads/2018/04/Divisions.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.division-select {
+  color: gold;
+  font-size: 2rem;
+  margin-left: 3rem;
+  padding-top: 5rem;
+  margin-top: 0;
+}
+.division-class {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform .2s;
+}
+
+.division-class:hover {
+  border: 2px solid #665b42;
+  cursor: pointer;
+  transform: translateX(10px);
+}
+.division-name {
+  width: 25%;
+  display: inline-block;
+}
+
+.division-title {
+  border-bottom: 1px solid gold;
+  border-top: 1px solid gold;
+  color: gold;
+  padding: 3px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.division-image {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  text-align: right;
+}
+
+.division-details {
+  width: 75%;
+  float: right;
+  text-align: center;
+}
+
+.division-rank {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.division-level {
+  text-align: center;
+}
+
+.division-button {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 800;
+  outline: none;
+  text-transform: uppercase;
+
+}
+
+.rank {
+  margin-top: 1rem;
+}
+.division-button:hover {
+  transform: translateY(-1px);
+}
+
+.divisionSelection {
+  display: inline-block;
+  min-width: 450px;
+
+}
+.square {
+  width: 13rem;
+  height: 9rem;
+  display: inline-block;
+  border: 2px solid transparent;
+  margin-top: 20px;
+  transition: all .2s;
+}
+.square:hover {
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: 2px;
+}
+
+.main-square {
+  display: inline-block;
+  width: 50%;
+}
+
+.small-square {
+  margin-right: 2rem;
+  display: inline-block;
+}
+
+.menu {
+  text-align: center;
+  line-height: 2px;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to left, transparent 0%, black 100%), url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/10/call-duty-wwii-cuenta-atras-lanzamiento.jpg?itok=EPP2C1LH");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.menu-heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  position: relative;
+}
+
+.menu-small-heading {
+  font-size: 1.6rem;
+  position: absolute;
+  top: -10px;
+  left: 44%;
+
+}
+
+.menu-sub-heading {
+  font-size: 5rem;
+  color: gold;
+}
+
+.menu-list {
+  text-align: left;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+}
+.menu-item {
+  color: white;
+  list-style: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem;
+  display: block;
+  text-decoration: none;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: translateX(20px);
+}
+
+/* soldier-menu */
+.soldierMenu {
+  background-image: linear-gradient(to bottom, transparent 0%,  black 100%), url("https://www.notebookcheck.net/fileadmin/Notebooks/Sonstiges/Games/CoD_WWII/ww2__9__1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.soldier-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.soldier-sub-heading {
+  font-size: 1.5rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.soldier-item {
+  color: white;
+  list-style: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.7rem;
+  display: block;
+  text-decoration: none;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.soldier-link {
+  color: white;
+  list-style: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  transition: all .2s;
+  cursor: pointer;
+}
+.soldier-item:hover {
+  transform: translateX(20px);
+}
+
+
+/* scorestreak */
+.scorestreak-width {
+  width: 100%;
+  position: relative;
+}
+
+.scorestreak {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.scorestreak-details {
+  display:flex;
+  width: 24%;
+  background: #b1b1b1;
+  opacity: 0.7;
+  padding: 2px;
+  margin: 2px;
+  transition: all .2s;
+}
+
+.scorestreak-details:hover {
+  transform: scale(1.12);
+}
+
+.scorestreak-select {
+  border: 2px solid black;
+  background-color: white;
+  opacity: 0.7;
+  display: inline-block;
+  text-align: center;
+  padding: .2rem;
+  margin: 1rem;
+  width: 300px;
+}
+.scorestreak-image {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.scorestreak-hover {
+  position: absolute;
+  left: 53%;
+  top: 30%;
+  width: 480px;
+  color: white;
+}
+
+.scorestreak-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: black;
+}
+
+.scorestreak-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.scorestreak-desc {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  width: 425px;
+}
+
+.scorestreak-score {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.scorestreak-b-image {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.scorestreak-button {
+  padding: .5rem .6rem;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  outline: none;
+  font-weight: 800;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.scorestreak-button:last-child {
+  margin-right: 0;
+}
+
+.scorestreak-reject {
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+
+/* settings */
+
+.settings {
+  position: relative;
+  background: linear-gradient(to right, black 0%, transparent 100%), url("https://gamespell.fr/wp-content/uploads/2018/04/ww2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.settings-menu {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  position: relative;
+  top: 20px;
+}
+
+.settings-item {
+  color: white;
+  list-style: none;
+  padding: 1rem 0;
+  width: 40%;
+  transition: translateX .2s;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.settings-item:hover {
+  transform: translateX(1rem);
+}
+
+
+.settings-hover {
+  position: absolute;
+  left: 40%;
+  top: 2rem;
+}
+
+.span-heading {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.span-desc {
+  display: block;
+  color: white;
+  font-weight: 580;
+}
+
+.settings-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Campaign */
+.campaign {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to top, black 0%, transparent 100%), url('https://cdn.vox-cdn.com/thumbor/Npo5lLtnayccTHB1-Od0F9ua_xk=/0x0:1920x1080/1200x675/filters:focal(527x57:833x363)/cdn.vox-cdn.com/uploads/chorus_image/image/57444975/CallofDuty_WWII_Screen2.0.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-select {
+  font-size: 3.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: white;
+}
+
+.home-link {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 570;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.home-link:hover {
+  transform: translateX(10px);
+}
+.carousel {
+  padding-top: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.full {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform .2s;
+  cursor:pointer;
+}
+
+.campaign-thumbnail:hover .campaign-name {
+  visibility: visible;
+}
+
+.next-button {
+   margin-left: -10px;
+   position: absolute;
+   right: 0%;
+   top: 75%;
+  }
+  .fas {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .prev-button {
+    position: absolute;
+    left: 0%;
+    top: 75%;
+  }
+
+.campaign-name {
+  visibility: hidden;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+
+.campaign-date {
+  color: white;
+  text-align: center;
+}
+
+/* CampaignInfo */
+
+.mission-background {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+
+.mission-position {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  color: white;
+}
+
+.mission-name {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.mission-subheading {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #b8b8b8;
+  font-weight: 600;
+}
+.mission-date {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #b8b8b8;
+  font-weight: 620;
+}
+
+.mission-rule {
+  border-bottom: 2px solid grey;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.mission-brief {
+  width: 250px;
+  margin-bottom: 60px;
+}
+.mission-brief-heading {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 580;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.mission-memento, .mission-heroic {
+margin-bottom: 10px;
+}
+
+.mission-difficulty {
+margin-bottom: 30px;
+}
+
+.mission-memento-heading, .mission-heroic-heading, .mission-difficulty-heading {
+  color: white;
+  font-size: .8rem;
+  font-weight: 530;
+  text-transform: uppercase;
+  color: #b1b1b1;
+}
+.mission-brief-desc {
+  color: #b1b1b1;
+}
+.mission-memento-desc, .mission-heroic-desc, .mission-difficulty-desc {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.mission-return {
+  padding: 1rem;
+  background: #b1b1b1;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.mission-return:hover {
+  background: #a9a9a9;
+}
+
+.audio {
+  display: none;
+}
